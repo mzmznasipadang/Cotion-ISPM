@@ -1,19 +1,38 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7;
 }
 
 .header {
     text-align: center;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
+    background-color: #6c757d;
+    color: lightblue;
 }
 
 .banner {
-    width: 100%;
-    height: 300px;
-    background: url('banner.jpg') no-repeat center center;
-    background-size: cover;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.banner h2 {
+    color: #343a40;
+}
+
+.banner ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.banner li {
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.banner li:last-child {
+    border-bottom: none;
 }
 
 .testimony {
@@ -33,4 +52,30 @@ body {
 
 .content {
     padding: 20px;
+}
+
+
+.banner {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.banner h2 {
+    color: #343a40;
+}
+
+.banner ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.banner li {
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.banner li:last-child {
+    border-bottom: none;
 }
