@@ -1,73 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Cotion - Upload History</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    
-    <body>
-        <div class="header">
-            <h1>Upload History</h1>
-        </div>
+<head>
+    <meta charset="utf-8">
+    <title>Cotion - Upload History</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Upload History</h1>
+    </div>
+    <div class="content">
+        <?php
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
-        <!-- History section -->
-        <div class="history">
-            <h2>History</h2>
-            <!-- Fetch history data from database and display it here -->
-            <?php
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-                // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
+            // Fetch data from table
+            $sql = "SELECT upload_date, file_name, feedback, score FROM uploads WHERE user_id = ?";
+            if ($stmt = $conn->prepare($sql)) {
+                // Bind the user id from the session or from a cookie
+                $stmt->bind_param("i", $_SESSION['user_id']);
+
+                // Execute the statement
+                $stmt->execute();
+
+                // Bind the result variables
+                $stmt->bind_result($upload_date, $file_name, $feedback, $score);
+
+                // Fetch the values
+                while ($stmt->fetch()) {
+                    echo "<div class='upload-history'>";
+                    echo "<h2>Uploaded File: " . htmlspecialchars($file_name) . "</h2>";
+                    echo "<p>Upload Date: " . htmlspecialchars($upload_date) . "</p>";
+                    echo "<p>Feedback: " . htmlspecialchars($feedback) . "</p>";
+                    echo "<p>Score: " . htmlspecialchars($score) . "</p>";
+                    echo "</div>";
                 }
 
-                // Fetch data from table
-                $sql = "SELECT upload_date, file_name, total_score FROM history";
-                $result = $conn->query($sql);
+                // Close the statement
+                $stmt->close();
+            }
 
-                if ($result->num_rows > 0) {
-                    // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo "<h3>Upload Date: " . $row["upload_date"]. "</h3><p>File Name: " . $row["file_name"]. "</p><p>Total Score: " . $row["total_score"]. "</p><hr>";
-                    }
-                } else {
-                    echo "No history";
-                }
-                $conn->close();
-            ?>
-        </div>
-
-        <!-- Feedback section -->
-        <div class="feedback">
-            <h2>Feedback</h2>
-            <!-- Fetch feedback data from database and display it here -->
-            <?php
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-
-                // Fetch data from table
-                $sql = "SELECT judge_name, score, comments FROM feedback";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo "<h3>Judge Name: " . $row["judge_name"]. "</h3><p>Score: " . $row["score"]. "</p><p>Comments: " . $row["comments"]. "</p><hr>";
-                    }
-                } else {
-                    echo "No feedback";
-                }
-                $conn->close();
-            ?>
-        </div>
-    </body>
+            // Close connection
+            $conn->close();
+        ?>
+    </div>
+</body>
 </html>
