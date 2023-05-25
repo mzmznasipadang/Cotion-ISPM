@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cotion - Home</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
+    <body>
+        <div class="header">
+            <h1>Welcome to Cotion</h1>
+            <p>The platform for online competitions</p>
+        </div>
+
+        <!-- Web banner -->
+        <div class="banner">
+            <img src="banner.jpg" alt="Cotion Banner">
+        </div>
+
+        <!-- Testimony section -->
+        <div class="testimony">
+            <h2>Testimonies</h2>
+            <p>"Cotion made it easy to participate in the competition!" - Participant 1</p>
+            <p>"I loved the experience, looking forward to next year's competition." - Participant 2</p>
+            <!-- Add more testimonies as desired -->
+        </div>
+
+        <!-- Download guide-books -->
+        <div class="downloads">
+            <h2>Download Guide-Books</h2>
+            <button onclick="location.href='uiux-guide.pdf'" type="button">Download Guide-Book for UI/UX Case</button>
+            <button onclick="location.href='it-guide.pdf'" type="button">Download Guide-Book for IT Case</button>
+        </div>
+
+        <div class="content">
+            <h2>Announcements</h2>
+            <!-- Announcements will be fetched from the database and displayed here -->
+            <?php
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Fetch data from table
+                $sql = "SELECT title, announcement, file_path FROM announcements";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        echo "<h3>" . $row["title"]. "</h3><p>" . $row["announcement"]. "</p>";
+                        echo "<a href='". $row["file_path"]. "' download>Download Attachment</a><hr>";
+                    }
+                } else {
+                    echo "No announcements";
+                }
+                $conn->close();
+            ?>
+        </div>
+    </body>
+</html>

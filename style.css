@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url('banner.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.testimony {
+    padding: 20px;
+}
+
+.downloads {
+    padding: 20px;
+}
+
+.downloads button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+}
