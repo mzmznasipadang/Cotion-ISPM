@@ -36,17 +36,21 @@ body {
 }
 
 .testimony {
+    margin-left: 20px;
     padding: 20px;
 }
 
 .downloads {
-    padding: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .downloads button {
     margin-right: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 20px;
+    font-size: 14px;
     cursor: pointer;
 }
 
