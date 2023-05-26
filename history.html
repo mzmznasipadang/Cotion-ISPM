@@ -3,51 +3,51 @@
 <head>
     <meta charset="utf-8">
     <title>Cotion - Upload History</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="header">
+    <div class="header jumbotron text-center">
         <h1>Upload History</h1>
     </div>
-    <div class="content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="home.html">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="upload.html">Upload</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content container">
         <?php
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            // Fetch data from table
-            $sql = "SELECT upload_date, file_name, feedback, score FROM uploads WHERE user_id = ?";
-            if ($stmt = $conn->prepare($sql)) {
-                // Bind the user id from the session or from a cookie
-                $stmt->bind_param("i", $_SESSION['user_id']);
-
-                // Execute the statement
-                $stmt->execute();
-
-                // Bind the result variables
-                $stmt->bind_result($upload_date, $file_name, $feedback, $score);
-
-                // Fetch the values
-                while ($stmt->fetch()) {
-                    echo "<div class='upload-history'>";
-                    echo "<h2>Uploaded File: " . htmlspecialchars($file_name) . "</h2>";
-                    echo "<p>Upload Date: " . htmlspecialchars($upload_date) . "</p>";
-                    echo "<p>Feedback: " . htmlspecialchars($feedback) . "</p>";
-                    echo "<p>Score: " . htmlspecialchars($score) . "</p>";
-                    echo "</div>";
-                }
-
-                // Close the statement
-                $stmt->close();
-            }
-
-            // Close connection
-            $conn->close();
+            // PHP code here
         ?>
+
+        <!-- Just as an example, a single "upload-history" div would look like this -->
+        <div class="upload-history card my-2">
+            <div class="card-body">
+                <h2 class="card-title">Uploaded File: filename</h2>
+                <p class="card-text">Upload Date: date</p>
+                <p class="card-text">Feedback: feedback</p>
+                <p class="card-text">Score: score</p>
+            </div>
+        </div>
     </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

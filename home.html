@@ -4,66 +4,70 @@
         <meta charset="utf-8">
         <title>Cotion - Home</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
-    
+
     <body>
-        <div class="header">
+        <div class="header jumbotron text-center">
             <h1>Welcome to Cotion</h1>
             <p>The platform for online competitions</p>
         </div>
 
-        <!-- Web banner -->
-        <div class="banner">
-         <h2>Competition Schedule</h2>
-            <ul>
-            <li>UI/UX Case Competition: June 10, 2023</li>
-            <li>IT Case Competition: July 25, 2023</li>
-            <!-- Add more dates as needed -->
-            </ul>
+         <!-- Navbar -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="home.html">Menu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="upload.html">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="banner card">
+            <div class="card-body">
+                <h2>Competition Schedule</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">UI/UX Case Competition: June 10, 2023</li>
+                    <li class="list-group-item">IT Case Competition: July 25, 2023</li>
+                    <!-- Add more dates as needed -->
+                </ul>
+            </div>
         </div>
 
-        <!-- Testimony section -->
-        <div class="testimony">
+        <div class="testimony my-3">
             <h2>Testimonies</h2>
             <p>"Cotion made it easy to participate in the competition!" - Participant 1</p>
             <p>"I loved the experience, looking forward to next year's competition." - Participant 2</p>
         </div>
 
-        <!-- Download guide-books -->
-        <div class="downloads">
+        <div class="downloads my-3">
             <h2>Download Guide-Books</h2>
-            <button onclick="location.href='uiux-guide.pdf'" type="button">Download Guide-Book for UI/UX Case</button>
-            <button onclick="location.href='it-guide.pdf'" type="button">Download Guide-Book for IT Case</button>
+            <button onclick="location.href='uiux-guide.pdf'" class="btn btn-primary" type="button">Download Guide-Book for UI/UX Case</button>
+            <button onclick="location.href='it-guide.pdf'" class="btn btn-primary" type="button">Download Guide-Book for IT Case</button>
         </div>
 
-        <div class="content">
+        <div class="content my-3">
             <h2>Announcements</h2>
-            <!-- Announcements will be fetched from the database and displayed here -->
-            <?php
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-
-                // Fetch data from table
-                $sql = "SELECT title, announcement, file_path FROM announcements";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo "<h3>" . $row["title"]. "</h3><p>" . $row["announcement"]. "</p>";
-                        echo "<a href='". $row["file_path"]. "' download>Download Attachment</a><hr>";
-                    }
-                } else {
-                    echo "No announcements";
-                }
-                $conn->close();
-            ?>
+            <!-- PHP code here -->
         </div>
+
+        <!-- Bootstrap JS and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>
