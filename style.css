@@ -10,6 +10,10 @@ body {
     color: lightblue;
 }
 
+h2{
+    margin-left: 20px;
+}
+
 .banner {
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
@@ -45,6 +49,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 40%;
+
 }
 
 .downloads button {
