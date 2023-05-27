@@ -8,6 +8,8 @@ body {
 }
 
 .navbar {
+    z-index: 1; /* Add this */
+    position: fixed; /* Add this if not already present */
     background-color: lightblue;
     height: 100px;
 }
