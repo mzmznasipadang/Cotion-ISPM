@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register - Cotion</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form action="register.php" method="post" enctype="multipart/form-data">
+            <h3>Team Leader (Mandatory)</h3>
+            <div class="form-group">
+                <label for="team_name">Team Name:</label>
+                <input type="text" class="form-control" id="team_name" name="team_name" required>
+            </div>
+
+            <!-- Other fields for the team leader (nama lengkap, gender, etc.) -->
+
+            <h3>Team Member 1 (Optional)</h3>
+            <div class="form-group">
+                <label for="member1_name">Full Name:</label>
+                <input type="text" class="form-control" id="member1_name" name="member1_name">
+            </div>
+
+            <!-- Other fields for team member 1 -->
+
+            <h3>Team Member 2 (Optional)</h3>
+            <div class="form-group">
+                <label for="member2_name">Full Name:</label>
+                <input type="text" class="form-control" id="member2_name" name="member2_name">
+            </div>
+
+            <!-- Other fields for team member 2 -->
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
