@@ -9,17 +9,8 @@ body {
 
 .navbar {
     z-index: 1; /* Add this */
-    position: fixed; /* Add this if not already present */
-    background-color: lightblue;
+    position: sticky; /* Add this if not already present */
     height: 100px;
-}
-
-.navbar-brand {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
 }
 
 .nav-link {
@@ -29,31 +20,12 @@ body {
 }
 
 .logo {
-    height: 80%; /* adjust as needed */
+    height: auto; /* adjust as needed */
     width: auto; 
+    max-width: 50%;
+    height: auto;
+    padding: 5px;
 }
-
-/* Adjust navbar height and logo size on small screens */
-@media (max-width: 768px) {
-    .navbar {
-        height: 60px;
-    }
-
-    .navbar-brand {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .nav-link {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .logo {
-        height: 60%; /* adjust as needed */
-    }
-}
-
 
 .hero-card {
     position: relative;
@@ -70,12 +42,6 @@ body {
     width: 100%;
     height: 100%;
     transition: transform .60s ease;
-}
-
-.logo {
-    max-width: 50%;
-    height: auto;
-    padding: 5px;
 }
 
 .hero-card .card-img {
