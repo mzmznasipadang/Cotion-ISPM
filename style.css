@@ -107,15 +107,6 @@ h2{
     padding: 20px;
 }
 
-.downloads {
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 40%;
-
-}
-
 .downloads button {
     margin-right: 10px;
     padding: 20px 20px;
