@@ -3,23 +3,55 @@ body {
     background-color: #f7f7f7;
 }
 
-.navbar {
-    background-color: lightblue; 
-}
-
 .navbar-nav .nav-link:hover {
     color: red !important; /* Change to desired color */
 }
 
+.navbar {
+    background-color: lightblue;
+    height: 100px;
+}
+
 .navbar-brand {
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 .nav-link {
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.logo {
+    height: 80%; /* adjust as needed */
+    width: auto; 
+}
+
+/* Adjust navbar height and logo size on small screens */
+@media (max-width: 768px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .navbar-brand {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav-link {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        height: 60%; /* adjust as needed */
+    }
+}
+
 
 .hero-card {
     position: relative;
