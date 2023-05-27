@@ -39,9 +39,9 @@ body {
 }
 
 .logo {
-    width: 30%;
-    height: 10%;
-    padding: 20;
+    max-width: 50%;
+    height: auto;
+    padding: 5px;
 }
 
 .hero-card .card-img {
