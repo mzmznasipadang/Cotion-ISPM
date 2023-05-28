@@ -6,38 +6,67 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="/img/logow.png" />
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .register-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .register-container h2 {
+            margin-bottom: 20px;
+        }
+        .register-container button {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h2>Registration</h2>
-        <form action="register.php" method="post" enctype="multipart/form-data">
-            <h3>Team Leader (Mandatory)</h3>
-            <div class="form-group">
-                <label for="team_name">Team Name:</label>
-                <input type="text" class="form-control" id="team_name" name="team_name" required>
+        <div class="row justify-content-center">
+            <div class="col-md-6 register-container">
+                <h2>Registration</h2>
+                <form action="/src/register.php" method="post" enctype="multipart/form-data">
+                    <h3>Team Leader (Mandatory)</h3>
+
+                    <div class="form-group">
+                        <label for="team_name">Team Name:</label>
+                        <input type="text" class="form-control" id="team_name" name="team_name" required>
+                    </div>
+
+                    <!-- Other fields for the team leader (nama lengkap, gender, etc.) -->
+
+                    <h3>Team Member 1 (Optional)</h3>
+                    <div class="form-group">
+                        <label for="member1_name">Full Name:</label>
+                        <input type="text" class="form-control" id="member1_name" name="member1_name">
+                    </div>
+
+                    <!-- Other fields for team member 1 -->
+
+                    <h3>Team Member 2 (Optional)</h3>
+                    <div class="form-group">
+                        <label for="member2_name">Full Name:</label>
+                        <input type="text" class="form-control" id="member2_name" name="member2_name">
+                    </div>
+
+                    <!-- Other fields for team member 2 -->
+
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
             </div>
-
-            <!-- Other fields for the team leader (nama lengkap, gender, etc.) -->
-
-            <h3>Team Member 1 (Optional)</h3>
-            <div class="form-group">
-                <label for="member1_name">Full Name:</label>
-                <input type="text" class="form-control" id="member1_name" name="member1_name">
-            </div>
-
-            <!-- Other fields for team member 1 -->
-
-            <h3>Team Member 2 (Optional)</h3>
-            <div class="form-group">
-                <label for="member2_name">Full Name:</label>
-                <input type="text" class="form-control" id="member2_name" name="member2_name">
-            </div>
-
-            <!-- Other fields for team member 2 -->
-
-            <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+        </div>
     </div>
 
     <!-- Bootstrap JS and jQuery -->
