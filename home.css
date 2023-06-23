@@ -72,39 +72,44 @@ body {
 }
 
 .banner-card{
-    width: 100%;
-    height: 555px;
+    width: auto;
     flex-shrink: 0;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 1rem;
 }
 
 .banner-text1{
+    height: 400px;
     color: #000;
     font-size: 40px;
-    font-family: Montserrat;
-    font-weight: 500;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-left: 3%;
 }
 
 .banner-card1{
-    width: 380px;
-    height: 380px;
+    width: 30%;
+    height: 350px;
     flex-shrink: 0;
     border-radius: 20px;
-    margin-right: 25px;
-    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
+    text-align: center;
 }
 
 .banner-textH{
     color: var(--off-white, #FAFAFA);
-    font-size: 24px;
+    font-size: 20px;
     font-family: Montserrat;
     font-weight: 500;
+    margin-top: 1.5rem;
 }
 
 .banner-textSH{
     color: var(--off-white, #FAFAFA);
-    font-size: 32px;
+    font-size: 29px;
     font-family: Montserrat;
     font-weight: 700;
 }
@@ -177,4 +182,16 @@ h2{
     color: #F6BE9A;
     font-weight: 800;
     font-size: 1.0625rem;
+  }
+
+  #basic-ux{
+    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
+  }
+
+  #it-case{
+    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
+  }
+
+  #bear-case{
+    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
   }
