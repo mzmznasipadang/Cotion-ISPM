@@ -1,0 +1,48 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.navbar-nav .nav-link:hover {
+    color: red !important; /* Change to desired color */
+}
+
+.navbar {
+    z-index: 1; /* Add this */
+    position: sticky; /* Add this if not already present */
+    height: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 73px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.hero{
+    width: 1439px;
+    height: 555px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.herocontainer{
+    width: 380px;
+    height: 380px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
+    margin-right: 25px;
+}

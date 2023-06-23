@@ -1,0 +1,177 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.navbar-nav .nav-link:hover {
+    color: red !important; /* Change to desired color */
+}
+
+.navbar {
+    z-index: 1; /* Add this */
+    position: sticky; /* Add this if not already present */
+    height: 100px;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 73px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.hero-card {
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+} 
+
+.hero-card img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-card .card-img {
+    opacity: 0.8;
+}
+
+.hero-card .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #FFF;
+    font-size: 96px;
+    font-family: Montserrat;
+    font-weight: 500;
+    display: flex;
+    width: 936px;
+    height: 116.235px;
+    flex-direction: column;
+    flex-shrink: 0; 
+    align-items: center;  
+}
+
+.card-text {
+    color: #FFF;
+    align-items: center;
+    text-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    font-size: 40px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.banner-card{
+    width: 100%;
+    height: 555px;
+    flex-shrink: 0;
+}
+
+.banner-text1{
+    color: #000;
+    font-size: 40px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.banner-card1{
+    width: 380px;
+    height: 380px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
+}
+
+.banner-textH{
+    color: var(--off-white, #FAFAFA);
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.banner-textSH{
+    color: var(--off-white, #FAFAFA);
+    font-size: 32px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.button1{
+    display: inline-flex;
+    padding: 15px 27px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--primary, #0047AB);
+}
+
+.button2{
+    display: inline-flex;
+    padding: 15px 27px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--royal-purple, #7851A9);
+}
+
+h2{
+    margin-left: 20px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    height: 120px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #1E1E1E;
+}
+
+.footer-bg{
+    position: absolute;
+    width: 100%;
+    height: 18.75rem;
+    top: 134.0625rem;
+    background-color:#1E1E1E;
+  }
+
+  .footer-desc{
+    margin: 0.625rem 0;
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #F7F7F7;
+  }
+
+  .footer-desc:hover{
+    color:#F92A82;
+  }
+
+  .footer-link{
+    color:#F7F7F7;
+    font-weight: 300;
+    font-size: 0.8125rem;
+  }
+
+  .footer-link:hover{
+    color: #F92A82;
+  }
+
+  .footer-title{
+    color: #F6BE9A;
+    font-weight: 800;
+    font-size: 1.0625rem;
+  }
