@@ -91,6 +91,7 @@ body {
     height: 380px;
     flex-shrink: 0;
     border-radius: 20px;
+    margin-right: 25px;
     background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
 }
 
