@@ -166,3 +166,84 @@ body {
     background-color: #002f6c;
   }
   
+  .footer {
+    width: 100%;
+    position: relative;
+    height: 120px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #1E1E1E;
+}
+
+.footer-bg{
+    position: absolute;
+    width: 100%;
+    height: 18.75rem;
+    margin-top: 7%;
+    /* top: 134.0625rem; */
+    background-color:#1E1E1E;
+  }
+
+  .footer-desc{
+    margin: 0.625rem 0;
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #F7F7F7;
+  }
+
+  .footer-desc:hover{
+    color:#F92A82;
+  }
+
+  .footer-link{
+    color:#F7F7F7;
+    font-weight: 300;
+    font-size: 0.8125rem;
+  }
+
+  .footer-link:hover{
+    color: #F92A82;
+  }
+
+  .footer-title{
+    color: #F6BE9A;
+    font-weight: 800;
+    font-size: 1.0625rem;
+  }
+
+  .level{
+    position: relative;
+    padding-top: 5.5%;
+    /* top: 4.6875rem; */
+    margin-right: 9%;
+    margin-left: 65%;
+    display: flex;
+    align-items:baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .logo-white{
+    position: absolute;
+    margin-top: 2%;
+  }
+
+  .logo-white img{
+    margin-left: 10%;
+    width: 13rem;
+    height: 7rem;
+  }
+
+  .logo-white p{
+    margin-left: 30%;
+    font-size: 1rem;
+    width: 10rem;
+  }
+
+  .orange-text{
+    color: #FFA700;
+  }
+
+  .red-text{
+    color: #DC143C;
+  }

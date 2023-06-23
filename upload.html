@@ -88,17 +88,38 @@
             </form>
         </div>
 
-        <!-- Bootstrap JS and jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-        <script>
-            const form = document.querySelector('form');
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                alert('Form has been submitted successfully!');
-                this.submit();
-            });
-        </script>
+        <footer>
+            <div class="footer-bg">
+                <div class="logo-white">
+                  <a href="home.html"><img src="/img/logow.png"></a>
+                  <p>Bring out your <span class="orange-text">best</span> of the <span class="red-text">best</span>!</p>
+                </div>
+                <div class="level">
+                  <div class="information">
+                    <p class="footer-title">INFORMATION</p>
+                    <p class="footer-desc">Terms and Conditions</p>
+                    <p class="footer-desc">Privacy and Policy</p>
+                    <p class="footer-desc">Cookie Management</p>
+                  </div>
+                  <div class="explore">
+                    <p class="footer-title">EXPLORE</p>
+                    <a href="home.html"><p class="footer-desc">Home</p></a>
+                    <a href="#"><p class="footer-desc">Upload</p></a>
+                    <a href="history.html"><p class="footer-desc">History</p></a>
+                  </div>
+                  </div>
+        </footer>
     </body>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Form has been submitted successfully!');
+            this.submit();
+        });
+    </script>
 </html>
