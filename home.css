@@ -114,24 +114,6 @@ body {
     font-weight: 700;
 }
 
-.button1{
-    display: inline-flex;
-    padding: 15px 27px;
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: 20px;
-    background: var(--primary, #0047AB);
-}
-
-.button2{
-    display: inline-flex;
-    padding: 15px 27px;
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: 20px;
-    background: var(--royal-purple, #7851A9);
-}
-
 h2{
     margin-left: 20px;
 }
@@ -189,9 +171,35 @@ h2{
   }
 
   #it-case{
-    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
+    background: var(--forest-gradient, linear-gradient(180deg, #3CB371 0%, #9ACD32 100%));
   }
 
   #bear-case{
-    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
+    background: var(--sky-gradient, linear-gradient(180deg, #87CEEB 0%, #87CEFA 100%));
   }
+
+.button1,
+.button2 {
+    display: inline-flex;
+    padding: 15px 27px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    color: #FFF;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.button1 {
+    background: var(--primary, #0047AB);
+}
+
+.button2 {
+    background: var(--royal-purple, #7851A9);
+}
+
+.button1:hover,
+.button2:hover {
+    background: var(--hover-color, #DC143C);
+}

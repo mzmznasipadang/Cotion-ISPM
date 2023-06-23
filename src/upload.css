@@ -30,19 +30,139 @@ body {
     flex-shrink: 0;
 }
 
-.hero{
-    width: 1439px;
-    height: 555px;
+.banner-card{
+    width: auto;
     flex-shrink: 0;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
-.herocontainer{
-    width: 380px;
-    height: 380px;
+.banner-text1{
+    height: 100px;
+    color: #000;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-left: 3%;
+}
+
+.banner-card1{
+    width: 30%;
+    height: 350px;
     flex-shrink: 0;
     border-radius: 20px;
-    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
-    margin-right: 25px;
+    text-align: center;
+    margin-bottom: 30px;
 }
+
+.banner-textH{
+    color: var(--off-white, #FAFAFA);
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.banner-textSH{
+    color: var(--off-white, #FAFAFA);
+    font-size: 29px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+#basic-ux{
+    background: var(--dusk-gradient, linear-gradient(180deg, #9370DB 0%, #D8BFD8 100%));
+  }
+
+  #it-case{
+    background: var(--forest-gradient, linear-gradient(180deg, #3CB371 0%, #9ACD32 100%));
+  }
+
+  #bear-case{
+    background: var(--sky-gradient, linear-gradient(180deg, #87CEEB 0%, #87CEFA 100%));
+  }
+
+.button1,
+.button2 {
+    display: inline-flex;
+    padding: 15px 27px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    color: #FFF;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.button1 {
+    background: var(--primary, #0047AB);
+}
+
+.button2 {
+    background: var(--royal-purple, #7851A9);
+}
+
+.button1:hover,
+.button2:hover {
+    background: var(--hover-color, #DC143C);
+}
+
+.content.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+  
+  .content.container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .content.container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  textarea.form-control,
+  input.form-control-file {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0047AB;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #002f6c;
+  }
+  
